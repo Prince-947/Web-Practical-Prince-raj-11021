@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<body>
+<script>
+    function showFunction() {
+        let result = addNumbers(5, 3);
+        document.getElementById("output").innerText =
+            "Sum using user-defined function: " + result;
+    }
+
+    function addNumbers(a, b) {
+        return a + b;
+    }
+
+    function scopeDemo() {
+        var x = 10;
+        let y = 20;
+        const z = 30;
+
+        if (true) {
+            var x = 100;
+            let y = 200;
+            const z = 300;
+
+            document.getElementById("output").innerText =
+                "Inside Block:\n" +
+                "var x = " + x + "\n" +
+                "let y = " + y + "\n" +
+                "const z = " + z;
+        }
+
+        document.getElementById("output").innerText +=
+            "\n\nOutside Block:\n" +
+            "var x = " + x + "\n" +
+            "let y = " + y + "\n" +
+            "const z = " + z;
+    }
+</script>
+
+</body>
+</html>

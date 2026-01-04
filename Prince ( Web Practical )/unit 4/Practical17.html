@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<body>
+<h2>Event Listener Example</h2>
+<script>
+    let box = document.getElementById("box");
+
+    function changeColor() {
+        box.style.background = "orange";
+    }
+
+    function resetColor() {
+        box.style.background = "lightblue";
+    }
+
+    document.getElementById("add").addEventListener("click", function () {
+        box.addEventListener("mouseover", changeColor);
+        box.addEventListener("mouseout", resetColor);
+        alert("Mouse events added");
+    });
+
+    document.getElementById("remove").addEventListener("click", function () {
+        box.removeEventListener("mouseover", changeColor);
+        box.removeEventListener("mouseout", resetColor);
+        alert("Mouse events removed");
+    });
+
+    document.addEventListener("keydown", function (event) {
+        alert("Key pressed: " + event.key);
+    });
+</script>
+
+</body>
+</html>

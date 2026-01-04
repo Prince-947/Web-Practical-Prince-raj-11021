@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>CSS Selectors Example</title>
+  <style>
+    /* Element Selector */
+    body {
+      background-color: #f5f5f5;
+      font-family: Arial, sans-serif;
+    }
+
+    /* ID Selector */
+    #main-heading {
+      color: darkblue;
+      text-align: center;
+    }
+
+    /* Class Selector */
+    .highlight {
+      color: green;
+      font-weight: bold;
+    }
+
+    /* Group Selector */
+    h2, p {
+      margin-left: 20px;
+    }
+
+    /* Descendant Selector */
+    div p {
+      color: darkred;
+    }
+
+    /* Pseudo-class Selector */
+    a:hover {
+      color: orange;
+      text-decoration: underline;
+    }
+  </style>
+</head>
+<body>
+  <h1 id="main-heading">CSS Selectors Demonstration</h1>
+
+  <h2 class="highlight">Types of Selectors</h2>
+
+  <p>This paragraph uses a <span class="highlight">class selector</span> for styling.</p>
+
+  <div>
+    <p>This paragraph is inside a div — styled using a descendant selector.</p>
+  </div>
+
+  <p>Visit <a href="#">this link</a> to see the hover effect.</p>
+</body>
+</html>
